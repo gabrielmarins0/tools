@@ -1,28 +1,35 @@
 body {
-    font-family: "JetBrains Mono", sans-serif;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: auto;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  h2 {
-    color: #555;
-  }
-  
-  p {
-    color: #666;
-    margin-left: 2%;
-  }
-  
-  p b {
-    color: #111;
-  }
-  
-  span{
-    margin-left: 2%;
-  }
-  
+  font-family: "JetBrains Mono", sans-serif;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #555;
+}
+
+p {
+  color: #666;
+  margin-left: 2%;
+}
+
+p b {
+  color: #111;
+}
+
+span {
+  margin-left: 2%;
+}
+
+code {
+  font-family: Consolas, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}

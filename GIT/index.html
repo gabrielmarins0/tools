@@ -10,65 +10,66 @@
     <h1>GIT</h1>
 
     <h2>Instalando</h2>
-    <p>Baixe o git em <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+    <p>Baixe o git em <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>. No windows, use o comando <code>winget install -id=Git.Git -e</code> para instalar mais facilmente.</p>
     <p>Instale o git usando as configurações padrões.</p>
-    <p>Verifique se o git foi instalado corretamente utilizando <b>git -v</b> no terminal.</p>
+    <p>Verifique se o git foi instalado corretamente utilizando git -v no terminal.</p>
     <br />
 
     <h2>Configurando usuário</h2>
-    <p>git config --global user.name "Seu Nome" - <b>Para configurar o nome do usuário que ficará salvo nos commits</b></p>
-    <p>git config --global user.email "Seu Email" - <b>Para configurar o email do usuário que ficará salvo nos commits</b></p>
-    <p>Lembrando que este nome e email não tem haver com a autenticação do github, serve apenas para os logs de commits</p>
+    <p><code>git config --global user.name "Seu Nome"</code> Para configurar o nome do usuário que ficará salvo nos commits.</p>
+    <p><code>git config --global user.email "Seu Email"</code> Para configurar o email do usuário que ficará salvo nos commits.</p>
+    <p><code>--global</code> deve ser usado caso seja deseje configurar para todos os projetos, remova para configurar apenas no diretorio atual.</p>
+    <p>Lembrando que este nome e email não tem haver com a autenticação do github, serve apenas para ficar registrado nos commits.</p>
     <br />
 
     <h2>Iniciando um novo repositorio local</h2>
-    <p>git init - <b>Para iniciar um novo repositorio</b></p>
-    <p>git branch -m "Nome da Branch" - <b>Para renomear a branch, normalmente é "master" e alterado para "main"</b></p>
+    <p><code>git init</code> Para iniciar um novo repositorio</p>
+    <p><code>git branch -m "Nome da Branch"</code> Para renomear a branch, normalmente é "master" e alterado para "main"</p>
     <br />
 
     <h2>Configurando repositorio remoto</h2>
-    <p>git remote add origin https://github.com/OWNER/REPOSITORY.git - <b>Para adicionar o repositorio remoto, o link do repositorio é obitido criando um repositorio no github</b></p>
-    <p>git remote set-url origin https://github.com/OWNER/REPOSITORY.git - <b>Para alterar o repositorio remoto</b></p>
-    <p>git push -u origin "Nome da Branch" - <b>Para enviar o repositorio para o servidor</b></p>
+    <p><code>git remote add origin https://github.com/OWNER/REPOSITORY.git</code> Para adicionar o repositorio remoto, o link do repositorio é obitido criando um repositorio no github</p>
+    <p><code>git remote set-url origin https://github.com/OWNER/REPOSITORY.git</code> Para alterar o repositorio remoto</p>
+    <p><code>git push -u origin "Nome da Branch"</code> Para enviar o repositorio para o servidor</p>
     <p>Será solicitado realizar a autenticação do usuário no github para acesso ao repositorio remoto</p>
     <br />
 
     <h2>Git Ignore</h2>
-    <p>Crie um arquivo chamado .ignore na pasta raiz do seu projeto</p>
-    <p>Adicione dentro deste arquivo o nome dos arquivos que deseja ignorar, por exemplo: ".ini", ".env". Também é possível adicionar pastas, exemplo "node_modules".</p>
-    <p>Os nomes de arquivos e pastas adicionados ao .gitignore não serao adicionados aos commits</p>
+    <p>Crie um arquivo chamado <code>.gitignore</code> na pasta raiz do seu projeto</p>
+    <p>Adicione dentro deste arquivo o nome dos arquivos e pastas que deseja ignorar, por exemplo: <code>node_modules</code>, <code>.ini</code>, <code>.env</code>.</p>
+    <p>Os nomes de arquivos e pastas adicionados ao <code>.gitignore</code> não serao adicionados aos commits</p>
     <br />
 
     <h2>Primeiro Commit</h2>
-    <p>git add . - <b>Para adicionar todos os arquivos da pasta (exceto o .gitignore) ao proximo stage, caso deseje comitar apenas um arquivo,coloque o nome do arquivo em vez do ponto.</b></p>
-    <p>git status - <b>Para ver o status do estado atual do git</b></p>
-    <p>git commit -m "Descrição do commit"- <b>Para fazer o primeiro commit</b></p>
-    <p>git status - <b>Novamente para validar o commit</b></p>
+    <p><code>git add .</code> Para adicionar todos os arquivos da pasta (exceto o <code>.gitignore</code>) ao proximo stage, caso deseje comitar apenas um arquivo,coloque o nome do arquivo em vez do ponto.</p>
+    <p><code>git status</code> Para ver o status do estado atual do git</p>
+    <p><code>git commit -m "Descrição do commit"</code> Para fazer o primeiro commit</p>
+    <p><code>git status</code> Novamente para validar o commit</p>
     <br />
 
     <h2>Verificando commits</h2>
-    <p>git log - <b>Para ver todos os commits com detalhes</b></p>
-    <p>git log --oneline - <b>Para ver todos os commits sem detalhes</b></p>
+    <p><code>git log</code> Para ver todos os commits com detalhes</p>
+    <p><code>git log --oneline</code> Para ver todos os commits sem detalhes</p>
     <br />
 
     <h2>Desfazendo Commits</h2>
     <p>Verifique o número do commit com git log --oneline</p>
-    <p>git checkout "id do commit" - <b>Volta para o commit especificado, é possível ver como estava o projeto neste ponto</b></p>
+    <p><code>git checkout "id do commit"</code> Volta para o commit especificado, é possível ver como estava o projeto neste ponto</p>
     <p><span>Use git checkout "Nome da Branch" para voltar para a branch mais recente. Exemplo: git checkout main</span></p>
-    <p>git revert "id do commit" - <b>Ira remover as alterações feitas no commit especificado até a branch mais recente, criando um novo commit.</b></p>
-    <p>git reset "id do commit" --hard - <b></b>Remove todos os commits após o commit especificado.</p>
+    <p><code>git revert "id do commit"</code> Ira remover as alterações feitas no commit especificado até a branch mais recente, criando um novo commit.</p>
+    <p><code>git reset "id do commit" --hard</code> Remove todos os commits após o commit especificado.</p>
     <br />
 
     <h2>Criando Branches</h2>
-    <p>git branch - <b>Para ver todas as branches, a brach com asterisco indica a branch atual</b></p>
-    <p>git branch "Nome da Branch" - <b>Cria uma nova branch com base na brach atual</b></p>
-    <p>git checkout "Nome da Branch" - <b>Vai para a branch especificada</b></p>
-    <p>git checkout -b "Nome da Branch" - <b>Cria uma nova branch e vai para ela</b></p>
-    <p>git branch -d "Nome da Branch" - <b>Remove a branch especificada</b></p>
+    <p><code>git branch</code> Para ver todas as branches, a brach com asterisco indica a branch atual</p>
+    <p><code>git branch "Nome da Branch"</code> Cria uma nova branch com base na brach atual</p>
+    <p><code>git checkout "Nome da Branch"</code> Vai para a branch especificada</p>
+    <p><code>git checkout -b "Nome da Branch"</code> Cria uma nova branch e vai para ela</p>
+    <p><code>git branch -d "Nome da Branch"</code> Remove a branch especificada</p>
     <br />
 
     <h2>Fundindo Branches</h2>
-    <p>git merge "Nome da Branch" - <b>Faz o merge da branch especificada com a branch atual</b></p>
+    <p><code>git merge "Nome da Branch"</code> Faz o merge da branch especificada com a branch atual</p>
     <br />
   </body>
 </html>
