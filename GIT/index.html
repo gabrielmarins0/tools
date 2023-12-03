@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>GIT</h1>
+
+    <h2>Instalando</h2>
+    <p>Baixe o git em <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+    <p>Instale o git usando as configurações padrões.</p>
+    <p>Verifique se o git foi instalado corretamente utilizando <b>git -v</b> no terminal.</p>
+    <br />
+
+    <h2>Configurando usuário</h2>
+    <p>git config --global user.name "Seu Nome" - <b>Para configurar o nome do usuário que ficará salvo nos commits</b></p>
+    <p>git config --global user.email "Seu Email" - <b>Para configurar o email do usuário que ficará salvo nos commits</b></p>
+    <p>Lembrando que este nome e email não tem haver com a autenticação do github, serve apenas para os logs de commits</p>
+    <br />
+
+    <h2>Iniciando um novo repositorio local</h2>
+    <p>git init - <b>Para iniciar um novo repositorio</b></p>
+    <p>git branch -m "Nome da Branch" - <b>Para renomear a branch, normalmente é "master" e alterado para "main"</b></p>
+    <br />
+
+    <h2>Configurando repositorio remoto</h2>
+    <p>git remote add origin https://github.com/OWNER/REPOSITORY.git - <b>Para adicionar o repositorio remoto, o link do repositorio é obitido criando um repositorio no github</b></p>
+    <p>git remote set-url origin https://github.com/OWNER/REPOSITORY.git - <b>Para alterar o repositorio remoto</b></p>
+    <p>git push -u origin "Nome da Branch" - <b>Para enviar o repositorio para o servidor</b></p>
+    <p>Será solicitado realizar a autenticação do usuário no github para acesso ao repositorio remoto</p>
+    <br />
+
+    <h2>Git Ignore</h2>
+    <p>Crie um arquivo chamado .ignore na pasta raiz do seu projeto</p>
+    <p>Adicione dentro deste arquivo o nome dos arquivos que deseja ignorar, por exemplo: ".ini", ".env". Também é possível adicionar pastas, exemplo "node_modules".</p>
+    <p>Os nomes de arquivos e pastas adicionados ao .gitignore não serao adicionados aos commits</p>
+    <br />
+
+    <h2>Primeiro Commit</h2>
+    <p>git add . - <b>Para adicionar todos os arquivos da pasta (exceto o .gitignore) ao proximo stage, caso deseje comitar apenas um arquivo,coloque o nome do arquivo em vez do ponto.</b></p>
+    <p>git status - <b>Para ver o status do estado atual do git</b></p>
+    <p>git commit -m "Descrição do commit"- <b>Para fazer o primeiro commit</b></p>
+    <p>git status - <b>Novamente para validar o commit</b></p>
+    <br />
+
+    <h2>Verificando commits</h2>
+    <p>git log - <b>Para ver todos os commits com detalhes</b></p>
+    <p>git log --oneline - <b>Para ver todos os commits sem detalhes</b></p>
+    <br />
+
+    <h2>Desfazendo Commits</h2>
+    <p>Verifique o número do commit com git log --oneline</p>
+    <p>git checkout "id do commit" - <b>Volta para o commit especificado, é possível ver como estava o projeto neste ponto</b></p>
+    <p><span>Use git checkout "Nome da Branch" para voltar para a branch mais recente. Exemplo: git checkout main</span></p>
+    <p>git revert "id do commit" - <b>Ira remover as alterações feitas no commit especificado até a branch mais recente, criando um novo commit.</b></p>
+    <p>git reset "id do commit" --hard - <b></b>Remove todos os commits após o commit especificado.</p>
+    <br />
+
+    <h2>Criando Branches</h2>
+    <p>git branch - <b>Para ver todas as branches, a brach com asterisco indica a branch atual</b></p>
+    <p>git branch "Nome da Branch" - <b>Cria uma nova branch com base na brach atual</b></p>
+    <p>git checkout "Nome da Branch" - <b>Vai para a branch especificada</b></p>
+    <p>git checkout -b "Nome da Branch" - <b>Cria uma nova branch e vai para ela</b></p>
+    <p>git branch -d "Nome da Branch" - <b>Remove a branch especificada</b></p>
+    <br />
+
+    <h2>Fundindo Branches</h2>
+    <p>git merge "Nome da Branch" - <b>Faz o merge da branch especificada com a branch atual</b></p>
+    <br />
+  </body>
+</html>
