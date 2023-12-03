@@ -1,101 +1,110 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
-  <title>NPM</title>
+	<meta charset="UTF-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1.0" />
+	<link
+		rel="stylesheet"
+		href="style.css" />
+	<script src="script.js"></script>
+	<title>NPM</title>
 </head>
 <body>
-  <h6>
-    Anotações do
-    <a
-      id="link"
-      class="link"
-      href="https://www.youtube.com/playlist?list=PLbV6TI03ZWYVjruiKLeb3m2rEXeYsG6RQ">
-      Curso gratuito Git e GitHub
-    </a>
-    , do Daniel Berg.
-  </h6>
-  <h1>Instalando</h1>
-  <p>
-    Baixe o Node.js
-    <a href="https://nodejs.org/en/download/">clicando aqui</a>
-    e faça a instalação. Junto será instalado o NPM.
-  </p>
-  <p>
-    Confira no terminal se o node.js e o npm foram instalados corretamente com
-    os comandos
-    <code>node -v</code>
-    e
-    <code>npm -v</code>
-  </p>
-  <br />
-  <h1>Npm init e package.json</h1>
-  <p>
-    Na pasta do projeto, use
-    <code>npm init</code>
-    para criar o package.json. Nele conterão as informações do projeto, use a
-    opção
-    <code>-y</code>
-    para criar o arquivo diretamente, sem responder as perguntas.
-  </p>
-  <p>
-    Use
-    <code>npm run "nome do scrip"</code>
-    para executar o scripts declarados no package.json na chave
-    <code>scripts</code>
-  </p>
-  <p>
-    Nunca alterar os arquivos
-    <code>.lock</code>
-    pois sao gerados automaticamente e contem informações importantes para o
-    funcionamento do npm
-  </p>
-  <p>
-    Previamente configure o arquivo
-    <code>.gitignore</code>
-    com
-    <code>node_modules</code>
-    para ignorar esta pasta nos commits.
-  </p>
-  <br />
-  <h1>Instalando e removendo pacotes</h1>
-  <p>
-    Use
-    <code>npm install "nome do pacote"</code>
-    para instalar um pacote especifico. Também pode ser usado o alias
-    <code>npm i "nome do pacote"</code>
-  </p>
-  <p>
-    Use
-    <code>npm uninstall | remove "nome do pacote"</code>
-    para remover um pacote especifico.
-  </p>
-  <p>
-    Use
-    <code>npm install</code>
-    para instalar ou remover pacotes, com base no arquivo package.json, chave
-    <code>dependencies</code>
-    :
-    <br />
-    <span>
-      Pacotes não presentes em node_modules e declarados serão instalados.
-    </span>
-    <br />
-    <span>
-      Pacotes presentes em node_modules e não declarados serão removidos.
-    </span>
-  </p>
-  <p>
-    Use
-    <code>--save-dev</code> ou <code>-D</code> para instalar um pacote de
-    <b>desenvolvimento</b>. Ele ficará declarado na chave
-    <code>devDependencies</code>
-    , separado dos demais pacotes da chave
-    <code>dependencies</code>
-    . Visualmente na pasta node_modules não existe uma separação.
-  </p>
-  <br />
-  <h1></h1>
+	<h6>
+		Anotações do
+		<a
+			id="link"
+			class="link"
+			href="https://www.youtube.com/playlist?list=PLbV6TI03ZWYVjruiKLeb3m2rEXeYsG6RQ">
+			Curso gratuito Git e GitHub
+		</a>
+		, do Daniel Berg.
+	</h6>
+	<h1>Instalando</h1>
+	<p>
+		Baixe o Node.js
+		<a href="https://nodejs.org/en/download/">clicando aqui</a>
+		e faça a instalação. Junto será instalado o NPM.
+	</p>
+	<p>
+		Confira no terminal se o node.js e o npm foram instalados corretamente com os comandos
+		<code>node -v</code>
+		e
+		<code>npm -v</code>
+	</p>
+	<br />
+	<h1>Npm init e package.json</h1>
+	<p>
+		Na pasta do projeto, use
+		<code>npm init</code>
+		para criar o package.json. Nele conterão as informações do projeto, use a opção
+		<code>-y</code>
+		para criar o arquivo diretamente, sem responder as perguntas.
+	</p>
+	<p>
+		Use
+		<code>npm run "nome do scrip"</code>
+		para executar o scripts declarados no package.json na chave
+		<code>scripts</code>
+	</p>
+	<p>
+		Nunca alterar os arquivos
+		<code>.lock</code>
+		pois sao gerados automaticamente e contem informações importantes para o funcionamento do npm
+	</p>
+	<p>
+		Previamente configure o arquivo
+		<code>.gitignore</code>
+		com
+		<code>node_modules</code>
+		para ignorar esta pasta nos commits.
+	</p>
+	<br />
+	<h1>Instalando e removendo pacotes</h1>
+	<p>
+		Use
+		<code>npm install "nome do pacote"</code>
+		para instalar um pacote especifico. Também pode ser usado o alias
+		<code>npm i "nome do pacote"</code>
+	</p>
+	<p>
+		Use
+		<code>npm uninstall | remove "nome do pacote"</code>
+		para remover um pacote especifico.
+	</p>
+	<p>
+		Use
+		<code>npm install</code>
+		para instalar ou remover pacotes, com base no arquivo package.json, chave
+		<code>dependencies</code>
+		:
+		<br />
+		<span> Pacotes não presentes em node_modules e declarados serão instalados. </span>
+		<br />
+		<span> Pacotes presentes em node_modules e não declarados serão removidos. </span>
+	</p>
+	<p>
+		Use
+		<code>--save-dev</code> ou <code>-D</code> para instalar um pacote de <b>desenvolvimento</b>. Ele ficará declarado na chave
+		<code>devDependencies</code>
+		, separado dos demais pacotes da chave
+		<code>dependencies</code>
+		. Visualmente na pasta node_modules não existe uma separação.
+	</p>
+	<br />
+	<h1>Extras: Yarn</h1>
+	<p>
+		Instale conforme orientações do link
+		<a href="https://yarnpkg.com/getting-started/install"> https://yarnpkg.com/getting-started/install </a>
+	</p>
+	<p>Use <code>yarn init</code> para para criar o package.json</p>
+	<p>Use <code>yarn add "nome do pacote"</code> para instalar o pacote especificado.</p>
+	<p>Use <code>yarn remove "nome do pacote"</code> para remover o pacote especificado.</p>
+	<p>Use <code>yarn upgrade "nome do pacote"</code> para atualizar pacote especificado.</p>
+	<p>Use <code>yarn upgrade</code> para atualizar todos os pacotes</p>
+	<p>Use <code>yarn</code> como alias para instalar e remover os pacotes conforme as <code>dependencies</code> declaradas no arquivo package.json</p>
+	<p>Usar apenas um do gerenciadores em um projeto, ou npm, ou yarn, para evitar conflitos de configuração.</p>
+	<br />
+	<br />
 </body>
